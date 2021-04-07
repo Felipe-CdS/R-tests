@@ -26,12 +26,12 @@ def lightSaberFinder(board, width, height):
                     return(lightSaberCoords);
             elif(board[j][i] == 7):
                 if((board[j][(i-1)] == 42) and ((i-1) != 0)):
-                    holder = checkNeighboursJackpot(board, i, j, width, height);
+                    holder = checkNeighboursJackpot(board, (i-1), j, width, height);
                     if(holder != [0,0]):
                         lightSaberCoords = holder;
                         return(lightSaberCoords);
                 elif((board[j][(i+1)] == 42) and ((i+1) != (width-1))):
-                    holder = checkNeighboursJackpot(board, i, j, width, height);
+                    holder = checkNeighboursJackpot(board, (i+1), j, width, height);
                     if(holder != [0,0]):
                         lightSaberCoords = holder;
                         return(lightSaberCoords);
